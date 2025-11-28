@@ -8,7 +8,9 @@
 		<version>3.5.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+    <packaging>war</packaging>
+
+    <groupId>com.example</groupId>
 	<artifactId>ExcelDownload</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ExcelDownload</name>
