@@ -37,7 +37,7 @@ public class StudentService {
     public List<Student> getAllStudentSorted()
     {
          return studentrepo.findAll().stream()
-                 .sorted((o1,o2)-> o1.getStandard().compareTo(o2.getStandard()))
+                 .sorted((O1,O2)-> O1.getStandard().compareTo(O2.getStandard()))
                  .collect(Collectors.toList());
     }
 
