@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
 @Service
 public class StudentService {
 
@@ -32,6 +33,15 @@ public class StudentService {
 
         return studentrepo.findAll(pageable);
     }
+
+    public List<Student> getAllStudentSorted()
+    {
+         return studentrepo.findAll().stream()
+                 .sorted((o1,o2)-> o1.getStandard().compareTo(o2.getStandard()))
+                 .collect(Collectors.toList());
+    }
+
+
 
     public void deleteStudent(Integer id){
         studentrepo.deleteById(id);

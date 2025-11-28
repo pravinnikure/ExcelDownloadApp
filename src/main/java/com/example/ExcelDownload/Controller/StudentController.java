@@ -87,6 +87,11 @@ public class StudentController {
                 .body(file);
 
         return body;
+    }
 
+    @GetMapping("/sorted")
+    public List<Student> getStudentSorted()
+    {
+        return  studentService.getAllStudentSorted();
     }
 }
